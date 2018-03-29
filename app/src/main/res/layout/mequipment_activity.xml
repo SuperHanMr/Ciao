@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="#33c388"
+        android:padding="30px"
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+        <ImageView
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:id="@+id/mequipmnet_back"
+            android:src="@drawable/me_equipment_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#fff"
+            android:textSize="45px"
+            android:text="我的花园"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/mequipmnet_add"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="160px"
+            android:layout_height="50px">
+
+            <ImageView
+                android:src="@drawable/add_al"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:background="#33c388"
+        android:layout_width="match_parent"
+        android:layout_height="200px">
+    </FrameLayout>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:layout_marginTop="60px"
+        android:id="@+id/mequipmnet_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+
+</LinearLayout>

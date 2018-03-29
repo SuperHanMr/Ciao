@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="60px"
+        android:paddingRight="60px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_marginTop="110px"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ciao_logo"
+        />
+
+    <RelativeLayout
+        android:layout_marginTop="150px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/login_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/login_tv_logini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="登陆"
+                android:textColor="#293426"
+                android:textSize="34px" />
+
+            <TextView
+                android:id="@+id/login_tv_registered"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:textColor="#293426"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="注册"
+                android:textSize="34px"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20px"
+            android:layout_below="@+id/login_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:id="@+id/login_letf_lin"
+                android:layout_weight="1"
+                android:background="#000"
+                android:layout_width="match_parent"
+                android:layout_height="2px"/>
+            <View
+                android:id="@+id/login_right_lin"
+                android:layout_weight="1"
+                android:background="#b4b4b4"
+                android:layout_width="match_parent"
+                android:layout_height="2px"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- 登陆输入框-->
+        <LinearLayout
+            android:id="@+id/logdin_logdin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/login_tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="账号"
+                    android:textColor="#2a2728"
+                    android:textSize="24px" />
+
+                <EditText
+                    android:id="@+id/login_ed_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@id/login_tv_account"
+                    android:background="#0000"
+                    android:hint="请输入账号"
+                    android:textColorHint="#dddddd"
+                    android:textSize="24px" />
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/login_ed_account"
+                    android:layout_marginTop="30px"
+                    android:background="#b4b4b4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px">
+
+                <TextView
+                    android:id="@+id/login_tv_pawssword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:text="密码"
+                    android:textColor="#2a2728"
+                    android:textSize="24px" />
+
+                <EditText
+                    android:inputType="textPassword"
+                    android:id="@+id/login_ed_pawssword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@id/login_tv_pawssword"
+                    android:background="#0000"
+                    android:hint="请输入密码"
+                    android:textColorHint="#dddddd"
+                    android:textSize="24px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/login_ed_pawssword"
+                    android:layout_marginTop="30px"
+                    android:background="#b4b4b4" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="42px">
+
+                <TextView
+                    android:id="@+id/login_tv_frgot_pawssword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="忘记密码"
+                    android:textSize="24px" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <!-- 注册输入框-->
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/logdin_registered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40px"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/login_ed_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:background="#0000"
+                    android:hint="请输入手机号"
+                    android:textColorHint="#dddddd"
+                    android:textSize="24px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/login_ed_phone"
+                    android:layout_marginTop="20px"
+                    android:background="#b4b4b4" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px">
+                <EditText
+                    android:id="@+id/login_ed_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:background="#0000"
+                    android:hint="请输入验证码"
+                    android:textColorHint="#dddddd"
+                    android:textSize="24px" />
+
+
+
+             <RelativeLayout
+
+                 android:id="@+id/login_rl_code"
+                 android:gravity="center"
+                 android:background="@drawable/code_rounded_corners"
+                 android:layout_alignParentRight="true"
+                 android:layout_width="230px"
+                 android:layout_height="50px">
+
+                 <TextView
+                     android:id="@+id/login_tv_code"
+                     android:textSize="24px"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="发送验证码"
+                     />
+             </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/login_ed_code"
+                android:layout_marginTop="20px"
+                android:background="#b4b4b4" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px">
+                <EditText
+                    android:inputType="textPassword"
+                    android:id="@+id/registered_ed_pawssword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:background="#0000"
+                    android:hint="请输入密码"
+                    android:textColorHint="#dddddd"
+                    android:textSize="24px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/registered_ed_pawssword"
+                    android:layout_marginTop="20px"
+                    android:background="#b4b4b4" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px">
+                <EditText
+                    android:inputType="textPassword"
+                    android:id="@+id/registered_ed_confirm_pawssword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10px"
+                    android:background="#0000"
+                    android:hint="请再次输入密码"
+                    android:textColorHint="#dddddd"
+                    android:textSize="24px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/registered_ed_confirm_pawssword"
+                    android:layout_marginTop="20px"
+                    android:background="#b4b4b4" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_marginTop="114px"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#fff"
+            android:text="登陆"
+            android:layout_width="260px"
+            android:layout_height="52px"
+            android:background="@drawable/rounded_corners"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="160px"
+            android:text="第三方登陆"
+            android:textColor="#dbdbdb" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50px"
+            android:layout_marginTop="30px">
+
+            <View
+                android:id="@+id/bouttn_lin"
+                android:layout_width="300px"
+                android:layout_height="1px"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="40px"
+                android:background="#b4b4b4" />
+
+            <ImageView
+                android:id="@+id/login_iv_weixi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/weixin_logo" />
+            <View
+                android:layout_width="300px"
+                android:layout_height="1px"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="40px"
+                android:background="#b4b4b4" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

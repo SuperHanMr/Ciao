@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_activity"/>
+
+    <View
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <ImageView
+        android:layout_marginTop="70px"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/wifi_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/conactenon_wifi"
+        android:layout_marginTop="60px"
+        android:layout_gravity="center_horizontal"
+        android:textSize="38px"
+        android:text="选择设备工作WiFi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="110px"
+        android:paddingRight="110px"
+        android:layout_marginTop="40px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/conactenon_wifiname"
+            android:layout_marginLeft="10px"
+            android:textSize="30px"
+            android:text="WiFi名称"
+            android:background="#0000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginTop="15px"
+            android:background="#000"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/conactenon_pawssrod"
+            android:textSize="30px"
+            android:hint="请输入Wi-Fi密码"
+            android:layout_marginLeft="10px"
+            android:layout_marginTop="50px"
+            android:background="#0000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginTop="15px"
+            android:background="#000"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/conactenon_btn"
+        android:textColor="#fff"
+        android:text="配置Wifi"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50px"
+        android:layout_width="350px"
+        android:layout_height="80px"
+        android:background="@drawable/rounded_green"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/conactenon_recyclerview"
+        android:layout_marginTop="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

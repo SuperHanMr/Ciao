@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160px">
+        <ImageView
+            android:id="@+id/posting_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            />
+        <TextView
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="我要发帖"
+            android:textSize="50px" />
+
+        <TextView
+            android:id="@+id/posting_tv_send"
+            android:textColor="#000"
+            android:layout_marginRight="30px"
+            android:text="发表"
+            android:layout_gravity="right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.Toolbar>
+
+  <LinearLayout
+      android:orientation="vertical"
+      android:paddingLeft="20px"
+      android:paddingRight="20px"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <EditText
+          android:paddingTop="10px"
+          android:paddingLeft="20px"
+          android:gravity="top|left"
+          android:id="@+id/posting_ed_content"
+          android:background="@drawable/code_rounded_corners"
+          android:layout_width="match_parent"
+          android:layout_height="450px" />
+
+
+      <TextView
+          android:id="@+id/posting_tv"
+          android:layout_gravity="right"
+          android:layout_marginTop="30px"
+          android:text="还可以输入100字"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+
+      <com.example.hanyonghui.ciao.view.views.GridViewInScroll
+          android:layout_marginTop="10px"
+          android:id="@+id/posting_gridview"
+          android:scrollbars="none"
+          android:verticalSpacing="2dp"
+          android:horizontalSpacing="2dp"
+          android:numColumns="3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+
+      <ImageButton
+          android:layout_marginTop="20px"
+          android:src="@drawable/add_pictures"
+          android:background="#0000"
+          android:id="@+id/pictures_seleter"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content" />
+
+  </LinearLayout>
+
+</LinearLayout>

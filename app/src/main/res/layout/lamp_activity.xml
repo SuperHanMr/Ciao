@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/pump_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160px">
+        <RelativeLayout
+            android:id="@+id/pumpstting_back"
+            android:layout_width="160px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@drawable/safar"
+                />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:textColor="#29c28a"
+            android:id="@+id/pumpstting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="智能灯设置"
+            android:textSize="45px" />
+
+
+        <RelativeLayout
+            android:id="@+id/stiing_rl"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:layout_width="160px"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_marginLeft="20px"
+                android:src="@drawable/stting_icon_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:paddingTop="7px"
+        android:paddingLeft="10px"
+        android:paddingBottom="7px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60px"
+        android:background="@drawable/watering_bg">
+
+        <TextView
+
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:text="开启智能AI照明"
+            android:textColor="#fff"
+            android:textSize="40px" />
+
+        <Switch
+
+            android:layout_marginLeft="50px"
+            android:layout_centerVertical="true"
+            android:id="@+id/ai_deng_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:thumb="@drawable/pums_swicht"
+            android:track="@drawable/on_of_bg" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:paddingTop="7px"
+        android:paddingLeft="10px"
+        android:paddingBottom="7px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80px"
+        android:background="@drawable/watering_bg">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:text="开启智能定时设置"
+            android:textColor="#fff"
+            android:textSize="40px" />
+
+        <Switch
+            android:layout_marginLeft="10px"
+            android:layout_centerVertical="true"
+            android:id="@+id/rengong_deng_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:thumb="@drawable/pums_swicht"
+            android:track="@drawable/on_of_bg" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/stiing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="130px"
+        android:layout_marginTop="10px"
+        android:text="重新设置"
+        android:textColor="#fff"
+        android:textSize="45px" />
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:paddingTop="7px"
+        android:paddingLeft="10px"
+        android:paddingBottom="7px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30px"
+        android:background="@drawable/watering_bg">
+
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:text="开启即时亮度设置"
+            android:textColor="#fff"
+            android:textSize="40px" />
+
+        <Switch
+            android:id="@+id/liangdu_deng_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:thumb="@drawable/pums_swicht"
+            android:track="@drawable/on_of_bg" />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+
+
+
+    <com.zhy.autolayout.AutoRelativeLayout
+        android:layout_marginTop="120px"
+        android:layout_marginRight="30px"
+        android:layout_marginLeft="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <SeekBar
+            android:layout_marginRight="20px"
+            android:id="@+id/seekbar"
+            android:max="100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:id="@+id/tv_liangdu"
+            android:layout_alignRight="@+id/seekbar"
+            android:textColor="#fff"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </com.zhy.autolayout.AutoRelativeLayout>
+
+
+
+    <View
+        android:layout_marginTop="30px"
+        android:layout_marginRight="45px"
+        android:layout_marginLeft="45px"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <Button
+        android:id="@+id/promping_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20px"
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_marginTop="50px"
+        android:background="@drawable/rounded_green"
+        android:gravity="center"
+        android:text="智能浇灌泵设置"
+        android:textColor="#fff"
+        android:textSize="20px" />
+
+
+</LinearLayout>
+
+
+<!--<LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:textColor="#fff"
+                android:layout_marginTop="12px"
+                android:layout_gravity="center_vertical"
+                android:text="亮度"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.xw.repo.BubbleSeekBar
+                android:layout_marginLeft="10px"
+                android:layout_marginTop="30px"
+                android:id="@+id/seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:bsb_max="100"
+                app:bsb_min="0"
+                app:bsb_progress="0"
+                app:bsb_second_track_color="#29c28a"
+                app:bsb_track_color="#fff"
+                app:bsb_track_size="4dp"/>
+        </LinearLayout>
+-->
+
+

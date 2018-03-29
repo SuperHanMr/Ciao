@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--&lt;!&ndash;按下状态的显示图片&ndash;&gt;-->
+    <!--<item android:state_checked="true" android:drawable="@drawable/account_message_sel"></item>-->
+    <!--&lt;!&ndash;平时状态的显示图片&ndash;&gt;-->
+    <!--<item android:state_checked="false" android:drawable="@drawable/account_message_no_sel"></item>-->
+</selector>

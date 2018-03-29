@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:id="@+id/layout_plantdata_describe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="30px"
+            android:layout_marginTop="20dp"
+            android:id="@+id/plandata_describe_tv_scientific"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中文学名"
+            />
+
+        <EditText
+            android:id="@+id/plandata_ed_scientific"
+            android:textSize="30px"
+            android:textColor="#8000"
+            android:layout_alignBottom="@+id/plandata_describe_tv_scientific"
+            android:background="#0000"
+            android:layout_marginLeft="166px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/plandata_describe_tv_scientific"
+            />
+
+        <TextView
+            android:textSize="30px"
+            android:id="@+id/plandata_describe_tv_latin"
+            android:layout_marginTop="40px"
+            android:layout_below="@+id/plandata_describe_tv_scientific"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拉丁学名"
+            />
+
+        <EditText
+            android:textColor="#8000"
+            android:textSize="30px"
+            android:id="@+id/plandata_describe_ed_latin"
+            android:layout_alignBottom="@+id/plandata_describe_tv_latin"
+            android:background="#0000"
+            android:layout_marginLeft="166px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/plandata_describe_tv_scientific"
+            />
+        <TextView
+            android:textSize="30px"
+            android:id="@+id/plandata_describe_tv_alis"
+            android:layout_marginTop="40px"
+            android:layout_below="@+id/plandata_describe_ed_latin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="别名"
+            />
+        <EditText
+            android:textSize="30px"
+            android:textColor="#8000"
+            android:id="@+id/plandata_describe_ed_alis"
+            android:layout_marginTop="38px"
+            android:inputType="textMultiLine"
+            android:layout_below="@+id/plandata_describe_ed_latin"
+            android:background="#0000"
+            android:layout_marginLeft="166px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/plandata_describe_tv_scientific"
+            />
+
+        <TextView
+            android:textSize="30px"
+            android:id="@+id/plandata_describe_tv_genaer"
+            android:layout_marginTop="40px"
+            android:layout_below="@+id/plandata_describe_ed_alis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="科属"
+            />
+        <EditText
+            android:id="@+id/plandata_ed_genaer"
+            android:textSize="30px"
+            android:textColor="#8000"
+            android:inputType="textMultiLine"
+            android:layout_alignBottom="@+id/plandata_describe_tv_genaer"
+            android:background="#0000"
+            android:layout_marginLeft="166px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/plandata_describe_tv_scientific"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/plandata_describe_btn"
+        android:textColor="#fff"
+        android:text="添加标签"
+        android:layout_marginTop="50px"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/green_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp" />
+
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="46px"
+        >
+
+        <View
+            android:layout_width="200px"
+            android:layout_height="1px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="30px"
+            android:background="#29c28a" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15px"
+            android:text="个性亮点" />
+
+        <View
+            android:layout_width="200px"
+            android:layout_height="1px"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="30px"
+            android:background="#29c28a" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/plandata_ed_personality"
+        android:textSize="30px"
+        android:textColor="#7000"
+        android:text="个性亮点"
+        android:background="#0000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+
+</LinearLayout>
+
+
+<!--<RelativeLayout-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content"-->
+<!--android:layout_alignParentBottom="true"-->
+<!--android:layout_marginBottom="46px"-->
+<!--android:layout_marginTop="50px">-->
+
+<!--<View-->
+
+    <!--android:layout_width="200px"-->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_marginTop="40px"-->
+    <!--android:background="#29c28a" />-->
+
+<!--<TextView-->
+    <!--android:layout_marginTop="15px"-->
+    <!--android:text="地理分布"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_gravity="center_horizontal"/>-->
+
+<!--<View-->
+    <!--android:layout_width="200px"-->
+    <!--android:layout_height="1px"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_marginTop="40px"-->
+    <!--android:background="#29c28a" />-->
+<!--</RelativeLayout>-->
+
+
+<!--<LinearLayout-->
+<!--android:orientation="horizontal"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="wrap_content">-->
+<!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--<ImageView-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:src="@drawable/badge"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:layout_marginTop="28px"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="种植级别"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="初级"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+<!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_weight="1"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--<ImageView-->
+        <!--android:layout_marginTop="10px"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:src="@drawable/place"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<TextView-->
+        <!--android:layout_marginTop="28px"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="适宜栽培地点"-->
+        <!--/>-->
+
+    <!--<TextView-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:text="阳台"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+<!--</LinearLayout>-->
+
+
+<!--</LinearLayout>-->

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/pump_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160px">
+
+        <RelativeLayout
+            android:id="@+id/paizhao_back"
+            android:layout_width="160px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@drawable/safar"
+                />
+        </RelativeLayout>
+
+
+        <TextView
+            android:textColor="#29c28a"
+            android:id="@+id/pumpstting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="植物识别"
+            android:textSize="60px" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/image_recognition"
+        android:layout_gravity="center"
+        android:src="@drawable/ciao_logo"
+        android:layout_marginTop="100px"
+        android:layout_width="200px"
+        android:layout_height="200px" />
+
+    <ImageView
+        android:background="@drawable/add_icon"
+        android:id="@+id/recognition_btn"
+        android:layout_marginTop="50px"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="20px"
+        android:layout_marginLeft="100px"
+        android:id="@+id/map_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+
+
+</LinearLayout>

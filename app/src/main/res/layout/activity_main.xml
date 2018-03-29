@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+   <com.example.hanyonghui.ciao.view.views.NoSorollViewpager
+       android:id="@+id/main_vp"
+       android:layout_weight="1"
+       android:layout_width="match_parent"
+       android:layout_height="0dp">
+   </com.example.hanyonghui.ciao.view.views.NoSorollViewpager>
+
+    <View
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+    <RadioGroup
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_new"
+            style="@style/tab_rb_style"
+            android:checked="true"
+            android:drawableTop="@drawable/new_selector"
+            android:text="花园"/>
+
+        <RadioButton
+            android:id="@+id/rb_community"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/community_selector"
+            android:text="社区"/>
+
+        <RadioButton
+            android:id="@+id/rb_library"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/library_selector"
+            android:text="植物库"/>
+        <RadioButton
+            android:id="@+id/rb_me"
+            style="@style/tab_rb_style"
+            android:drawableTop="@drawable/me_selector"
+            android:text="我的"/>
+    </RadioGroup>
+
+</LinearLayout>

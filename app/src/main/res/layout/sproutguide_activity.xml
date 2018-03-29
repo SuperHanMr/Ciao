@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/pump_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/university_brck"
+            android:src="@drawable/safar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#29c28a"
+            android:textSize="40px"
+            android:text="园叮大学"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_marginTop="30px"
+        android:paddingRight="20px"
+        android:paddingLeft="20px"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/university_seeds_ll"
+            android:background="@drawable/education_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="50px"
+                android:textColor="#fff"
+                android:layout_marginTop="110px"
+                android:layout_centerHorizontal="true"
+                android:text="种子俱乐部"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingBottom="5px"
+                android:gravity="center"
+                android:paddingRight="30px"
+                android:paddingLeft="30px"
+                android:background="@drawable/shadow"
+                android:layout_centerHorizontal="true"
+                android:textSize="38px"
+                android:textColor="#000"
+                android:layout_marginTop="175px"
+                android:text="Seed Club"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/university_maker_ll"
+            android:layout_marginTop="20px"
+            android:background="@drawable/seeds_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="50px"
+                android:textColor="#fff"
+                android:layout_marginTop="110px"
+                android:layout_centerHorizontal="true"
+                android:text="创客教育"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingBottom="5px"
+                android:gravity="center"
+                android:paddingRight="25px"
+                android:paddingLeft="25px"
+                android:background="@drawable/shadow"
+                android:layout_centerHorizontal="true"
+                android:textSize="38px"
+                android:textColor="#000"
+                android:layout_marginTop="175px"
+                android:text="Maker Edu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/university_lifestyle_ll"
+            android:layout_marginTop="20px"
+            android:background="@drawable/life_ng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="50px"
+                android:textColor="#fff"
+                android:layout_marginTop="110px"
+                android:layout_centerHorizontal="true"
+                android:text="生活美学"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:paddingBottom="5px"
+                android:gravity="center"
+                android:paddingRight="30px"
+                android:paddingLeft="30px"
+                android:background="@drawable/shadow"
+                android:layout_centerHorizontal="true"
+                android:textSize="38px"
+                android:textColor="#000"
+                android:layout_marginTop="175px"
+                android:text="Lifestyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

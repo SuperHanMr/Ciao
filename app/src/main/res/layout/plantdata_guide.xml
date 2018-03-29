@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_plantdata_guide"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="水分" />
+
+            <com.example.hanyonghui.ciao.view.views.RatingBarView
+                android:id="@+id/ratinview_moisture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18px"
+                app:starCount="5"
+                app:starEmpty="@drawable/water_n"
+                app:starFill="@drawable/water_h"
+                app:starImageSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27px"
+                android:text="光照" />
+
+            <com.example.hanyonghui.ciao.view.views.RatingBarView
+                android:id="@+id/ratinview_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18px"
+                app:starCount="5"
+                app:starEmpty="@drawable/fertilizer_n"
+                app:starFill="@drawable/fertilizer_h"
+                app:starImageSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:text="肥料" />
+
+            <EditText
+                android:id="@+id/plandata_ed_fertilizer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34px"
+                android:background="#0000"
+                android:text="磷肥"
+                android:textColor="#7000"
+                android:textSize="24px" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="温度" />
+
+           <RelativeLayout
+               android:layout_marginTop="15px"
+               android:layout_width="match_parent"
+               android:layout_height="25dp">
+
+               <EditText
+                   android:textSize="30px"
+                   android:layout_marginRight="18px"
+                   android:drawablePadding="10px"
+                   android:drawableRight="@drawable/temperature"
+                   android:layout_alignParentBottom="true"
+                   android:id="@+id/plandata_ed_temperature"
+                   android:layout_width="wrap_content"
+                   android:layout_height="25dp"
+                   android:background="#0000"
+                   android:text="10"
+                   android:textColor="#7000" />
+
+               <TextView
+                   android:layout_marginTop="7px"
+                   android:id="@+id/plandata_tv_zhi"
+                   android:text="至"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_toRightOf="@+id/plandata_ed_temperature"
+                   android:layout_toEndOf="@+id/plandata_ed_temperature" />
+
+               <EditText
+                   android:layout_marginLeft="18px"
+                   android:textSize="30px"
+                   android:id="@+id/plandata_ed_temperature_final"
+                   android:drawablePadding="10px"
+                   android:drawableRight="@drawable/temperature"
+                   android:layout_width="wrap_content"
+                   android:layout_height="25dp"
+                   android:background="#0000"
+                   android:text="10"
+                   android:textColor="#7000"
+                   android:layout_alignParentTop="true"
+                   android:layout_toRightOf="@+id/plandata_tv_zhi"
+                   android:layout_toEndOf="@+id/plandata_tv_zhi" />
+
+           </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27px"
+                android:text="肥料" />
+
+            <com.example.hanyonghui.ciao.view.views.RatingBarView
+                android:id="@+id/ratinview_fertilizer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18px"
+                app:starCount="5"
+                app:starEmpty="@drawable/feiliao_n"
+                app:starFill="@drawable/fieliao_h"
+                app:starImageSize="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50px"
+                android:text="虫害" />
+
+            <EditText
+                android:textColor="#7000"
+                android:textSize="24px"
+                android:background="#0000"
+                android:id="@+id/plandata_ed_pests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34px"
+                android:text="锈病,红蜘蛛危害" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16px"
+        android:layout_marginTop="50px">
+
+        <View
+            android:id="@+id/bouttn_lin"
+            android:layout_width="200px"
+            android:layout_height="1px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="40px"
+            android:background="#29c28a" />
+
+        <TextView
+            android:layout_marginTop="15px"
+            android:text="栽培时间"
+            android:id="@+id/login_iv_weixi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"/>
+
+        <View
+            android:layout_width="200px"
+            android:layout_height="1px"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40px"
+            android:background="#29c28a" />
+    </RelativeLayout>
+
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:background="@drawable/rounded_green"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:textSize="30px"
+            android:textColor="#fff"
+            android:text="月份"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginLeft="10px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="1"
+                android:id="@+id/checkbox_yi"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="二"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="2"
+                android:id="@+id/checkbox_er"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="三"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="3"
+                android:id="@+id/checkbox_san"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="四"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="4"
+                android:id="@+id/checkbox_si"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="五"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="5"
+                android:id="@+id/checkbox_wu"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="六"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="6"
+                android:id="@+id/checkbox_liu"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="七"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="7"
+                android:id="@+id/checkbox_qi"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="八"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="8"
+                android:id="@+id/checkbox_ba"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="九"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="9"
+                android:id="@+id/checkbox_jiu"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="十"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="10"
+                android:id="@+id/checkbox_shi"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="十一"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="11"
+                android:id="@+id/checkbox_shiyi"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="30px"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="30px"
+                android:textColor="#fff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="十二"
+                />
+            <CheckBox
+                android:textColor="#0000"
+                android:text="12"
+                android:id="@+id/checkbox_shier"
+                android:background="@drawable/selector_pumptowstiing"
+                android:layout_marginTop="30px"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:button="@null"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1px">
+
+        <View
+            android:layout_width="200px"
+            android:layout_height="1px"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="40px"
+            android:background="#29c28a" />
+
+        <TextView
+            android:layout_marginTop="15px"
+            android:text="种植方式"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"/>
+        <View
+            android:layout_width="200px"
+            android:layout_height="1px"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="40px"
+            android:background="#29c28a" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/plandata_breed"
+        android:textColor="#7000"
+        android:background="#0000"
+        android:layout_marginTop="46px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="土培插植"
+        />
+
+
+</LinearLayout>

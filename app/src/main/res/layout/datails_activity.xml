@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:background="@drawable/shaep_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/datails_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            />
+        <TextView
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="帖子详情"
+            android:textSize="50px" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_marginTop="50px"
+        android:paddingLeft="20px"
+        android:paddingRight="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/community_iv_head"
+            android:layout_width="130px"
+            android:src="@drawable/ciao_logo"
+            android:layout_height="130px"
+            />
+
+        <TextView
+            android:id="@+id/community_tv_name"
+            android:layout_marginLeft="10px"
+            android:textSize="40px"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/community_iv_head"
+            android:text="用户名"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/community_tv_time"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="2017-02-07"
+            android:textSize="35px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginLeft="20px"
+        android:id="@+id/community_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15px"
+        android:text="这是测试帖，随便说点什么 俗点哈哈哈哈"
+        android:textSize="40px" />
+
+
+    <com.example.hanyonghui.ciao.view.views.GridViewInScroll
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="10px"
+        android:layout_marginRight="20px"
+        android:id="@+id/community_gridview"
+        android:scrollbars="none"
+        android:verticalSpacing="2dp"
+        android:horizontalSpacing="2dp"
+        android:numColumns="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="20px"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="20px">
+
+        <ImageView
+            android:id="@+id/commentaries_iv"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="42px"
+            android:src="@drawable/commentaries_icon" />
+
+        <TextView
+            android:id="@+id/community_tv_commentaries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10px"
+            android:text="2"
+            android:textSize="30px" />
+
+        <CheckBox
+            android:layout_marginRight="160px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/checkbox_thumb"
+            android:background="@drawable/thumb_seleter"
+            android:layout_marginTop="30px"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:button="@null"
+            />
+
+        <TextView
+            android:id="@+id/thmub_tv_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="130px"
+            android:text="2"
+            android:textSize="30px" />
+    </RelativeLayout>
+
+    <View
+        android:background="#fbfbfb"
+        android:layout_width="match_parent"
+        android:layout_height="20px"/>
+
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_weight="100"
+       android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:id="@+id/datails_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+
+
+    <View
+        android:layout_marginTop="10px"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+        <EditText
+        android:id="@+id/datails_ed_comment"
+        android:singleLine="true"
+        android:imeOptions="actionSend"
+        android:layout_marginRight="10px"
+        android:layout_marginLeft="10px"
+        android:layout_marginBottom="10px"
+        android:paddingLeft="10px"
+        android:hint="想说点是什么..."
+        android:layout_marginTop="15px"
+        android:background="@drawable/code_rounded_corners"
+        android:layout_width="match_parent"
+        android:layout_height="60px" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
+<!--<EditText-->
+<!--android:id="@+id/datails_ed_comment"-->
+<!--android:singleLine="true"-->
+<!--android:imeOptions="actionSend"-->
+<!--android:layout_marginRight="10px"-->
+<!--android:layout_marginLeft="10px"-->
+<!--android:layout_marginBottom="10px"-->
+<!--android:paddingLeft="10px"-->
+<!--android:hint="想说点是什么..."-->
+<!--android:layout_marginTop="15px"-->
+<!--android:background="@drawable/code_rounded_corners"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="60px" />-->

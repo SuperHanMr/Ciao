@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/jieduan"
+        android:textSize="50px"
+        android:layout_marginTop="20dp"
+        android:text="植物阶段:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:background="#0000"
+        android:layout_alignBottom="@id/jieduan"
+        android:layout_toRightOf="@id/jieduan"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:inputType="number"
+        android:id="@+id/gardener_edit_text"
+        android:layout_marginTop="5px"
+        android:layout_width="50dp"
+        android:layout_height="30dp" />
+
+        <Button
+            android:id="@+id/gardener_btn"
+            android:textColor="#fff"
+            android:text="提交"
+            android:layout_marginRight="40px"
+            android:background="@drawable/rounded_green"
+            android:layout_alignBottom="@id/jieduan"
+            android:layout_width="100px"
+            android:layout_height="60px"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/gardenerrecyclervew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

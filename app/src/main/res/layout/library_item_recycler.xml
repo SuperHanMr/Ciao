@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#0000"
+    android:layout_height="wrap_content">
+   <com.zhy.autolayout.AutoRelativeLayout
+       android:id="@+id/library_item_rl"
+       android:background="#fff"
+       android:layout_marginTop="10dp"
+       android:layout_width="match_parent"
+       android:layout_height="170px">
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:layout_alignParentLeft="true"
+           android:id="@+id/library_item_iv_head"
+           android:layout_centerVertical="true"
+           android:layout_marginLeft="15px"
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:src="@drawable/ciao_logo"
+           />
+       <TextView
+           android:textColor="#000"
+           android:layout_marginLeft="20px"
+           android:layout_toRightOf="@+id/library_item_iv_head"
+           android:id="@+id/library_item_tv_name"
+           android:textSize="30px"
+           android:layout_centerVertical="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="玫瑰花"
+           />
+       <ImageView
+           android:layout_marginRight="20px"
+           android:layout_alignParentRight="true"
+           android:src="@drawable/forward"
+           android:layout_centerVertical="true"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+
+           />
+   </com.zhy.autolayout.AutoRelativeLayout>
+
+</RelativeLayout>

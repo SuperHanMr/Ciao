@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.hanyonghui.ciao.view.views.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20px"
+    android:id="@+id/layot"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+            android:layout_marginLeft="40px"
+            android:id="@+id/me_quipment_item_rl"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_marginLeft="20px"
+                android:id="@+id/me_quipment_item_iv_head"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/yuan_icon"
+                />
+            <TextView
+                android:layout_marginLeft="20px"
+                android:textColor="#000"
+                android:id="@+id/me_tv_ciao"
+                android:layout_marginTop="40px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/me_quipment_item_iv_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ciao园叮智能AI自动浇灌阀"
+                />
+            <TextView
+                android:id="@+id/me_quipment_item_tv_line"
+                android:layout_marginTop="5px"
+                android:text="设备离线"
+                android:textSize="38px"
+                android:layout_alignLeft="@+id/me_tv_ciao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/me_tv_ciao"
+                />
+        </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginBottom="0.2dp">
+        <ImageView
+
+            android:layout_marginLeft="40px"
+            android:id="@+id/tv_modify"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/shanchushe" />
+    </LinearLayout>
+
+
+
+</com.example.hanyonghui.ciao.view.views.SwipeLayout>
+
+
+

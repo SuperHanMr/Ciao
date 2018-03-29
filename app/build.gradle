@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    aaptOptions {
+        cruncherEnabled = false
+        useNewCruncher = false
+    }
+    defaultConfig {
+        applicationId "com.example.hanyonghui.ciao"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "2.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    //依赖注入：ButterKnife
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    //下拉刷新RecyclerView
+    compile 'com.jcodecraeer:xrecyclerview:1.3.2'
+    // 屏幕适配
+    compile 'com.zhy:autolayout:1.4.5'
+    // json解析
+    compile 'com.google.code.gson:gson:2.8.0'
+    //okGo联网框架
+    compile 'com.lzy.net:okgo:2.1.4'
+    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    //图片加载框架Glide
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    // Tab框架
+    compile project(':library-ViewPagerIndicator')
+    compile project(':library')
+    // EventBus事件
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //庆科wifi模块
+    compile 'io.fogcloud.sdk:easylinkv3:0.1.4'
+    compile 'io.fogcloud.sdk:mdns:0.0.3'
+    //Dialog弹框
+    // 时间选择器
+    compile 'com.contrarywind:Android-PickerView:3.2.6'
+    // 圆形头像
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    // 发帖子图片选择器
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.1'
+
+    //漂浮按钮
+    compile 'com.melnykov:floatingactionbutton:1.3.0'
+    // 微信登陆
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    // 百度识图
+    compile files('libs/aip-java-sdk-3.2.0.jar')
+    compile files('libs/json-20160810.jar')
+    compile project(':bubbleseekbar')
+
+
+
+}

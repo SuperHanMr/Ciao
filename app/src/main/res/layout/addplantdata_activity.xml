@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160px">
+        <ImageView
+            android:id="@+id/addplan_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            />
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/newgraden_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="添加植物"
+            android:textSize="50px" />
+       <TextView
+           android:id="@+id/addplan_commtion"
+           android:layout_marginRight="70px"
+           android:layout_gravity="right"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="确定"
+           />
+    </android.support.v7.widget.Toolbar>
+
+
+    <com.example.hanyonghui.ciao.view.views.ImageEditdingView
+        android:id="@+id/addplan_head"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:src="@drawable/ciao_logo"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请上传头像"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="60px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_green"
+        android:text="添加标签"
+        android:textColor="#fff" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:background="@drawable/shadow"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物姓名:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_name"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_s"
+                android:background="#0000"
+                android:hint="植物姓名"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物水分:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_shuifen"
+                android:hint="植物水分"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_a"
+                android:background="#0000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物温度:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_shidu"
+                android:hint="植物温度"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物光度:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_guangdu"
+                android:hint="植物光度"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_e"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_d"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物肥料:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_feiliao"
+                android:hint="植物肥料"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_d"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物适合的肥料:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_feiliao1"
+                android:hint="植物适合的肥料"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_t"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物的虫害:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_chonghai"
+                android:hint="植物的虫害"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_y"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_q"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物学名:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_xue"
+                android:hint="植物的学名"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_q"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_r"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物的拉丁学名:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_lading"
+                android:hint="植物植物的拉丁名"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_r"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_u"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物别名:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_bieming"
+                android:hint="植物别名"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_u"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_g"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物科属:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_keshu"
+                android:hint="植物科属"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_g"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="40px"
+                android:id="@+id/tv_plant_p"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="植物个性亮点:"
+                />
+            <EditText
+                android:id="@+id/addplan_ed_gexing"
+                android:hint="植物的个性亮点"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50px"
+                android:textSize="40px"
+                android:layout_toRightOf="@+id/tv_plant_p"
+                android:background="#0000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+            <Button
+                android:id="@+id/yuanding_btn"
+                android:textColor="#fff"
+                android:text="园丁养成"
+                android:background="@drawable/rounded_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="10px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:src="@drawable/yuan_true"
+            android:layout_width="30px"
+            android:layout_height="30px" />
+
+        <TextView
+
+            android:id="@+id/pumptow_item_tv_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="50px"
+            android:text="06:00"
+            android:textColor="#29c28a"
+            android:textSize="45px" />
+
+
+
+        <TextView
+            android:id="@+id/pumptow_item_tv_f"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10px"
+            android:layout_toRightOf="@+id/pumptow_item_tv_start"
+            android:text="开始"
+
+            android:textSize="40px" />
+
+        <View
+            android:id="@+id/pumptow_item_view"
+            android:layout_width="1dp"
+            android:layout_height="40px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15px"
+            android:layout_toRightOf="@+id/pumptow_item_tv_f"
+            android:background="#29c28a" />
+
+        <EditText
+            android:gravity="center"
+            android:maxLength="3"
+            android:id="@+id/pumptow_item_edtime"
+            android:layout_width="100px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="3px"
+            android:layout_toRightOf="@+id/pumptow_item_view"
+            android:background="#0000"
+            android:textColor="#29c28a"
+            android:textSize="40px" />
+
+        <TextView
+
+            android:layout_marginTop="3px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_toRightOf="@+id/pumptow_item_edtime"
+            android:text="时/每次"
+            android:textSize="40px" />
+
+        <ImageView
+            android:id="@+id/pump_item_delete"
+            android:src="@drawable/shanchu"
+            android:layout_marginRight="30px"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="40px"
+            android:layout_height="40px" />
+    </RelativeLayout>
+
+
+
+    <com.zhy.autolayout.AutoLinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <SeekBar
+            android:layout_weight="1000"
+            android:id="@+id/seekbar"
+            android:max="100"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_liangdu"
+            android:textColor="#fff"
+            android:text="亮度"
+            android:layout_weight="10000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.zhy.autolayout.AutoLinearLayout>
+
+</com.zhy.autolayout.AutoLinearLayout>

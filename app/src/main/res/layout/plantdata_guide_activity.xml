@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/toolbar_activity"/>
+
+
+
+
+
+
+    <com.example.hanyonghui.ciao.view.views.MusicProgressBar
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/musicProgressBar"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_centerInParent="true"
+        app:pointRadius="4dp"
+        app:pointWidth="2dp"
+        app:roundColor="#9ac8be"
+        app:roundProgressColor="#33c388"
+        app:roundWidth="3dip" />
+
+    <TextView
+        android:id="@+id/guide_tv_planname"
+        android:textColor="#000"
+        android:textSize="35px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="蓝盆花"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10px"
+        android:orientation="vertical"
+        android:paddingLeft="160px"
+        android:paddingRight="160px">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#33c388" />
+        <TextView
+            android:id="@+id/guide_ed_cycle"
+            android:layout_marginTop="30px"
+            android:textSize="30px"
+            android:text="幼苗"
+            android:background="#0000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="80px">
+
+            <View
+                android:id="@+id/bouttn_lin"
+                android:layout_width="120px"
+                android:layout_height="1px"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="40px"
+                android:background="#29c28a" />
+
+            <TextView
+                android:layout_marginTop="20px"
+                android:text="园丁事项"
+                android:id="@+id/login_iv_weixi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"/>
+            <View
+                android:layout_width="120px"
+                android:layout_height="1px"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="40px"
+                android:background="#29c28a" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="浇水"
+                />
+            <TextView
+                android:id="@+id/guide_tv_water"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一周"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="20px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="喷雾"
+                />
+            <TextView
+                android:id="@+id/guide_tv_spray"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一月"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

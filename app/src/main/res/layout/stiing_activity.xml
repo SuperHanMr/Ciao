@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingLeft="20px"
+    android:paddingRight="20px"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100px">
+        <ImageView
+            android:id="@+id/stting_back"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            />
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="45px"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            />
+
+        <TextView
+            android:id="@+id/stting_commtion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确定"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/stiing_head"
+        android:layout_marginTop="120px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <de.hdodenhof.circleimageview.CircleImageView
+           android:id="@+id/me_head"
+           android:layout_alignParentRight="true"
+           android:src="@drawable/ciao_logo"
+           android:layout_width="100px"
+           android:layout_height="100px" />
+
+        <TextView
+
+            android:textColor="#000"
+            android:textSize="30px"
+            android:layout_centerVertical="true"
+            android:text="更改头像"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="10px"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:layout_marginTop="40px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更改名字"
+            android:textSize="30px"
+            />
+
+        <EditText
+            android:background="#0000"
+            android:id="@+id/user_name"
+            android:layout_marginRight="30px"
+            android:textColor="#000"
+            android:textSize="30px"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="瀚"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="30px"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:layout_marginTop="40px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号"
+            android:textSize="30px"
+            />
+
+        <EditText
+            android:id="@+id/user_phone"
+            android:layout_marginRight="30px"
+            android:background="#0000"
+            android:textSize="30px"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <View
+        android:layout_marginTop="30px"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/stting_code_rl"
+        android:layout_marginTop="30px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码"
+            android:textSize="30px"
+            />
+
+
+        <RelativeLayout
+            android:layout_centerVertical="true"
+            android:id="@+id/stiing_rl_code"
+            android:gravity="center"
+            android:background="@drawable/code_rounded_corners"
+            android:layout_alignParentRight="true"
+            android:layout_width="150px"
+            android:layout_height="50px">
+
+            <TextView
+                android:id="@+id/stiing_tv_code"
+                android:textSize="24px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送验证码"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_below="@+id/stiing_rl_code"
+            android:layout_marginTop="30px"
+            android:background="#000"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/tuichu"
+        android:textColor="#fff"
+        android:text="退出账号"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="250px"
+        android:layout_width="250px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_green"
+        />
+
+
+</LinearLayout>

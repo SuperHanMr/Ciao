@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/pump_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="160px">
+
+
+        <RelativeLayout
+            android:id="@+id/pumpstting_back"
+            android:layout_width="160px"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:src="@drawable/safar"
+                />
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:textColor="#29c28a"
+            android:id="@+id/pumpstting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="智能泵浇水设置"
+            android:textSize="60px" />
+
+
+        <RelativeLayout
+            android:id="@+id/stiing_rl"
+            android:gravity="center"
+            android:layout_gravity="right"
+            android:layout_width="160px"
+            android:layout_height="match_parent">
+
+            <ImageView
+
+                android:layout_marginLeft="20px"
+                android:src="@drawable/stting_icon_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_marginLeft="50px"
+        android:layout_marginRight="50px"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="130px"
+        android:background="@drawable/watering_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:text="开启自动浇灌"
+            android:textColor="#fff"
+            android:textSize="40px" />
+
+        <Switch
+            android:layout_centerVertical="true"
+            android:id="@+id/pumpstting_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:thumb="@drawable/pums_swicht"
+            android:track="@drawable/on_of_bg" />
+        <!--提供开和关的素材-->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/stiing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="130px"
+        android:layout_marginTop="10px"
+        android:text="重新设置"
+        android:textColor="#fff"
+        android:textSize="45px" />
+
+
+    <com.example.hanyonghui.ciao.view.views.LongButtonView
+        android:id="@+id/image_but"
+        android:layout_marginTop="140px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/watering_icon"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+    <TextView
+        android:textColor="#fff"
+        android:textSize="50px"
+        android:layout_marginTop="30px"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="即刻浇水"
+        />
+
+
+
+</LinearLayout>

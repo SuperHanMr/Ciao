@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+           android:layout_centerVertical="true"
+            android:id="@+id/conactenon_icon"
+            android:src="@drawable/pump_icon"
+            android:layout_width="120px"
+            android:layout_height="110px" />
+
+
+      <LinearLayout
+          android:layout_centerVertical="true"
+          android:orientation="vertical"
+          android:layout_marginLeft="10px"
+          android:layout_marginTop="45px"
+          android:layout_toRightOf="@+id/conactenon_icon"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+
+          <TextView
+              android:text="设备"
+              android:textSize="35px"
+              android:id="@+id/conactenon_tv"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+
+          <TextView
+              android:id="@+id/conactenon_tv_mac"
+              android:layout_marginTop="5px"
+              android:textSize="30px"
+              android:text="mac地址"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" />
+      </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/conactenon_btn"
+            android:layout_marginRight="40px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/addshebei_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>
