@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -45,6 +46,8 @@ public class PumpStiingActivity  extends AutoLayoutActivity{
     private String type;
 
     private boolean isSwitch;
+    private RelativeLayout stiingRl;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +57,16 @@ public class PumpStiingActivity  extends AutoLayoutActivity{
         textTitle.setText(setTites());
         buttonView = (LongButtonView) findViewById(R.id.image_but);
         aSwitch = (Switch) findViewById(R.id.pumpstting_switch);
+
         id = getIntent().getStringExtra(KeyUtils.EQUIPMENTNAMEID);
+        String isLamp = getIntent().getStringExtra(KeyUtils.ISLAMP);
+        stiingRl = (RelativeLayout) findViewById(R.id.stiing_rl);
+        if (isLamp!=null) {
+            stiingRl.setVisibility(View.GONE);
+        }else {
+            stiingRl.setVisibility(View.VISIBLE);
+        }
+
         initData();
         setSwitch();
         buttonView.setListener(new LongButtonView.OnLongListener() {
@@ -103,7 +115,7 @@ public class PumpStiingActivity  extends AutoLayoutActivity{
         });
 
 
-        findViewById(R.id.stiing_rl).setOnClickListener(new View.OnClickListener() {
+        stiingRl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //TODO 跳转到设备的设置页面 修改设备名称 和检查更新
@@ -195,9 +207,9 @@ public class PumpStiingActivity  extends AutoLayoutActivity{
             public void onSuccess(String s, Call call, Response response) {
                 Gson gson = new Gson();
                 SheBeiSwichtBean sheBeiSwichtBean = gson.fromJson(s, SheBeiSwichtBean.class);
-                if (sheBeiSwichtBean.getC().getOnline()==1){
-                    isSwitch = false;
-                    LogUtils.e(sheBeiSwichtBean.getC().getOnline()+"");
+                String autowater = sheBeiSwichtBean.getC().getAutowater();
+                if (autowater.contains("B1")||autowater.contains("F1")){
+                    LogUtils.e("状态："+autowater);
                     isSwitch = true;
                     aSwitch.setChecked(true);
                 }else {

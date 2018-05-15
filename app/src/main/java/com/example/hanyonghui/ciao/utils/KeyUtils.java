@@ -45,4 +45,8 @@ public class KeyUtils {
     public static final String TYPE_D1 = "D1";
 
 
+    public static final String ISLAMP = "isLamp";
+
+
+
 }

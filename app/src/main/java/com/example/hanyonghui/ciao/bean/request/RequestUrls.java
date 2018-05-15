@@ -137,7 +137,7 @@ public class RequestUrls {
     public static final String MESSAGE = HTTP+"twitter/commentOrPraise";
 
 
-    public static final String AIOPENLIGHT = "http://123.56.204.69:8081/ciao/lamp/aiOpenLight";
+    public static final String AIOPENLIGHT = HTTP+"lamp/aiOpenLight";
 //    http://123.56.204.69:8081/ciao/lamp/aiOpenLight
 
     public static final String MANUL = HTTP+"lamp/manual";

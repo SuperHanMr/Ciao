@@ -75,12 +75,24 @@
         android:background="@drawable/rounded_green"
         />
 
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:text="可用设备"
+        android:textSize="19sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
+
     <android.support.v7.widget.RecyclerView
+
         android:layout_marginLeft="20px"
         android:layout_marginRight="20px"
         android:layout_gravity="center_horizontal"
         android:id="@+id/conactenon_recyclerview"
-        android:layout_marginTop="30px"
+        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </android.support.v7.widget.RecyclerView>

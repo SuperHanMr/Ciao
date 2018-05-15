@@ -25,18 +25,20 @@
             android:layout_height="wrap_content" />
 
         <RelativeLayout
+
             android:id="@+id/mequipmnet_add"
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
-            android:layout_width="160px"
-            android:layout_height="50px">
+            android:layout_width="30dp"
+            android:layout_height="30dp">
 
             <ImageView
+
                 android:src="@drawable/add_al"
                 android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
         </RelativeLayout>
 
 

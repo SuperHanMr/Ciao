@@ -204,6 +204,7 @@
         android:layout_height="1px"/>
 
     <Button
+
         android:id="@+id/promping_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -218,7 +219,7 @@
         android:gravity="center"
         android:text="智能浇灌泵设置"
         android:textColor="#fff"
-        android:textSize="20px" />
+        android:textSize="20dp" />
 
 
 </LinearLayout>

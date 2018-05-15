@@ -9,6 +9,7 @@ import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import com.baidu.aip.imageclassify.AipImageClassify;
 import com.example.hanyonghui.ciao.R;
@@ -138,13 +139,21 @@ public class ImageViewRecognitionActivity extends AutoLayoutActivity {
                 JSONObject res = classify.plantDetect(compressPath, options);
                 LogUtils.e(res.toString());
 
-                Gson gson = new Gson();
-                Recognition recognition = gson.fromJson(res.toString(), Recognition.class);
-                List<Recognition.ResultBean> result = recognition.getResult();
-                Message age = new Message();
-                age.obj = result;
-                age.what = 0;
-                handler.sendMessage(age);
+                try {
+                    Gson gson = new Gson();
+                    Recognition recognition = gson.fromJson(res.toString(), Recognition.class);
+                    List<Recognition.ResultBean> result = recognition.getResult();
+                    Message age = new Message();
+                    age.obj = result;
+                    age.what = 0;
+                    handler.sendMessage(age);
+
+                } catch (Exception e) {
+
+
+//                    Toast.makeText(ImageViewRecognitionActivity.this, "识别错误", Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         }).start();

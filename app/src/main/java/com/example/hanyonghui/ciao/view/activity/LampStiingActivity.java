@@ -11,12 +11,14 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.hanyonghui.ciao.R;
+import com.example.hanyonghui.ciao.bean.bean.SheBeiSwichtBean;
 import com.example.hanyonghui.ciao.bean.request.NetworkReuset;
 import com.example.hanyonghui.ciao.bean.request.RequestUrls;
 import com.example.hanyonghui.ciao.utils.KeyUtils;
 import com.example.hanyonghui.ciao.utils.LogUtils;
 import com.example.hanyonghui.ciao.utils.MyToast;
 import com.example.hanyonghui.ciao.utils.SPUtils;
+import com.google.gson.Gson;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.HttpParams;
 import com.zhy.autolayout.AutoLayoutActivity;
@@ -44,7 +46,7 @@ public class LampStiingActivity extends AutoLayoutActivity implements CompoundBu
 
 
     @BindView(R.id.seekbar)
-    SeekBar seekbar;
+    SeekBar mSeekbar;
     @BindView(R.id.tv_liangdu)
     TextView tvLingdu;
 
@@ -54,9 +56,8 @@ public class LampStiingActivity extends AutoLayoutActivity implements CompoundBu
     private int mManual;
 
 
-
-
-    private boolean isLiangdu;
+    private boolean isSwitch = false;
+    private boolean isLiangdu = true;
     private String id;
 
     @Override
@@ -73,9 +74,18 @@ public class LampStiingActivity extends AutoLayoutActivity implements CompoundBu
         aiDengSwitch.setOnCheckedChangeListener(this);
         rengongDengSwitch.setOnCheckedChangeListener(this);
         liangduDengSwitch.setOnCheckedChangeListener(this);
+        mSeekbar.setOnSeekBarChangeListener(this);
+        mSeekbar.setProgress(10);
+        mSeekbar.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return isLiangdu;
+            }
+        });
 
-        seekbar.setOnSeekBarChangeListener(this);
-        seekbar.setProgress(10);
+        // 查询任务
+        setSwitch();
+
     }
 
 
@@ -99,7 +109,16 @@ public class LampStiingActivity extends AutoLayoutActivity implements CompoundBu
                 aiDengSwitch.setChecked(false);
                 liangduDengSwitch.setChecked(false);
 //                openLaborDeng(1);
-                startActivity(new Intent(this, PumpTowStiingActivity.class).putExtra(KeyUtils.EQUIPMENTNAMEID, id));
+
+                if (isSwitch){
+                    isSwitch = false;
+                }else {
+                    SPUtils.putInt(KeyUtils.EQUIPMENTTYPE,6);
+                    startActivity(new Intent(this, PumpTowStiingActivity.class).putExtra(KeyUtils.EQUIPMENTNAMEID, id));
+
+                }
+
+
             } else {
                 LogUtils.e("---->关闭了人工任务");
                 openLaborDeng(2);
@@ -110,13 +129,13 @@ public class LampStiingActivity extends AutoLayoutActivity implements CompoundBu
             if (isChecked) {
                 aiDengSwitch.setChecked(false);
                 rengongDengSwitch.setChecked(false);
-                seekbar.setPressed(false);
-                isLiangdu = true;
+
+                isLiangdu = false;
             } else {
                 LogUtils.e("---->关闭了亮度");
                 openDiyLiangdu();
-                isLiangdu = false;
-                seekbar.setPressed(true);
+                isLiangdu = true;
+
 
             }
         }
@@ -125,6 +144,37 @@ public class LampStiingActivity extends AutoLayoutActivity implements CompoundBu
 
     }
 
+
+    // TODO 查询是否开启了自动任务
+    private void setSwitch(){
+        HttpParams params = new HttpParams();
+        params.clear();
+        params.put("uid",SPUtils.getString(KeyUtils.USERID));// 用户ID
+        params.put("did",id);// 设备ID
+        NetworkReuset.getInstance().PostReuset(RequestUrls.ENQUIRIESEQUIPMENT, params, new StringCallback() {
+            @Override
+            public void onSuccess(String s, Call call, Response response) {
+                Gson gson = new Gson();
+                SheBeiSwichtBean sheBeiSwichtBean = gson.fromJson(s, SheBeiSwichtBean.class);
+                String autowater = sheBeiSwichtBean.getC().getAutowater();
+                if (autowater.contains("D1")){
+                    LogUtils.e("状态："+autowater);
+                    isSwitch = true;
+                    rengongDengSwitch.setChecked(true);
+                }else {
+                    rengongDengSwitch.setChecked(false);
+                }
+
+
+                if (autowater.contains("D4")){
+                    aiDengSwitch.setChecked(true);
+                }else {
+                    aiDengSwitch.setChecked(false);
+                }
+
+            }
+        });
+    }
 
     /*
     开启AI智能灯任务
@@ -191,12 +241,14 @@ public class LampStiingActivity extends AutoLayoutActivity implements CompoundBu
                         .putExtra("id", id));
                 break;
             case R.id.stiing:
+                SPUtils.putInt(KeyUtils.EQUIPMENTTYPE,6);
                 startActivity(new Intent(LampStiingActivity.this, PumpTowStiingActivity.class).putExtra(KeyUtils.EQUIPMENTNAMEID, id));
                 break;
 
             case R.id.promping_btn:
                 SPUtils.putInt(KeyUtils.EQUIPMENTTYPE,4);
-                startActivity(new Intent(this, PumpStiingActivity.class).putExtra(KeyUtils.EQUIPMENTNAMEID, id));
+
+                startActivity(new Intent(this, PumpStiingActivity.class).putExtra(KeyUtils.EQUIPMENTNAMEID, id).putExtra(KeyUtils.ISLAMP,"lamp"));
                 break;
         }
     }
@@ -208,7 +260,13 @@ public class LampStiingActivity extends AutoLayoutActivity implements CompoundBu
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         mManual = progress;
-        tvLingdu.setText(progress+"");
+        if (progress<=10) {
+            mSeekbar.setProgress(10);
+            tvLingdu.setText(10+"");
+        }else {
+            tvLingdu.setText(progress+"");
+        }
+
     }
 
     @Override

@@ -85,7 +85,7 @@
            <TextView
                android:textColor="#000"
                android:textSize="35px"
-               android:text="设备更新"
+               android:text="固件升级"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content" />
 
